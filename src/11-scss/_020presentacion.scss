@@ -1,0 +1,13 @@
+@function alturafuente($h){@return calc( 1rem * $h/2 + 1vw * $h/2 );}
+.presentacion {
+  line-height: 2;
+  figure {img { width:100%; }}
+  video {width: 100%; }
+  h2,h3 {padding-left: alturafuente(3);}
+  figcaption {text-align: center; }
+}
+@media (min-width: $a-min-0001) and ( max-width: $a-max-0600)  {
+  .categoria dl dt div   {flex-direction: column;}
+  .categoria dl dt div p {padding-bottom: alturafuente(1);}
+}
+

@@ -1,0 +1,73 @@
+@use "sass:color";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap'); /*fuentes /* 400  700 800 */
+//$debug:none; /* Invertir a la hora de entregar la practica */
+//$debug:inline;
+
+@function alturafuente($h){@return calc( 1rem * $h/2 + 1vw * $h/2 );}
+* {box-sizing: border-box; margin: 0;padding: 0;}
+#debug {display: $debug;font-size:alturafuente(1); }
+$fuente-sans-serif:"Inter","Arial" sans-serif;
+$fuente-serif: "Georgia", "Times New Roman", serif;
+h1  {font-size: alturafuente(2.5);}
+h2  {font-size: alturafuente(2);}
+h3  {font-size: alturafuente(1.5);}
+p   {font-size: alturafuente(1);}
+dl  {font-size: alturafuente(1.5);}
+dt  {font-size: alturafuente(1.8);}
+dd  {font-size: alturafuente(1.5);}
+li  {font-size: alturafuente(1.5);}
+ul  {font-size: alturafuente(1.5);}
+figcaption { font-size: alturafuente(2);}
+span {font-size:alturafuente(1.7);}
+strong {font-size:alturafuente(2);}
+.oculto {  display: none;}
+
+
+
+
+$c-cabecera-fondo: chocolate;
+$c-cabecera-texto:blue;
+$c-cabecera-texto-contraste:red;
+
+ul {list-style-type: none;text-decoration: none;}
+a {text-decoration: none;color: $c-cabecera-texto;}
+a:hover {text-decoration: none;color: $c-cabecera-texto-contraste;}
+
+$c-boton-diapositiva-texto:#fff;
+$c-boton-diapositiva-fondo:#0000ff;
+$c-boton-diapositiva-borde:yellowgreen;
+
+$cc-fondo-0550:rgb(255,255,255); $cc-texto-0550:rgb(0,0,0);
+$cc-fondo-0750:rgb(255,255,255); $cc-texto-0750:rgb(0,0,0);
+$cc-fondo-0950:rgb(255,255,255); $cc-texto-0950:rgb(0,0,0);
+$cc-fondo-1150:rgb(255,255,255); $cc-texto-1150:rgb(0,0,0);
+$cc-fondo-1350:rgb(255,255,255); $cc-texto-1350:rgb(0,0,0);
+$cc-fondo-1550:rgb(255,255,255); $cc-texto-1550:rgb(0,0,0);
+
+
+@if $debug==inline {
+  $cc-fondo-0550:rgb(255,0,0);   $cc-texto-0550:rgb(0,255,255);
+  $cc-fondo-0750:rgb(255,155,0); $cc-texto-0750:rgb(0,100,255);
+  $cc-fondo-0950:rgb(0,255,0);   $cc-texto-0950:rgb(250,0,255);
+  $cc-fondo-1150:rgb(0,255,155); $cc-texto-1150:rgb(250,0,100);
+  $cc-fondo-1350:rgb(0,0,255);   $cc-texto-1350:rgb(250,250,0);
+  $cc-fondo-1550:rgb(0,155,255); $cc-texto-1550:rgb(250,100,0);
+}
+.contenedor {//display: flex;justify-content: center;
+  margin: 0 auto;}
+  
+$a-min-0001:  1px;   $a-max-0600:  600px;   $a-0550:  550px;  
+@media (min-width: $a-min-0001) and ( max-width: $a-max-0600)  {.contenedor { max-width: $a-0550;background-color: $cc-fondo-0550;color:$cc-texto-0550 }}
+$a-min-0601:  601px; $a-max-0800:  800px;   $a-0750:  750px;  
+@media (min-width: $a-min-0601) and ( max-width: $a-max-0800)  {.contenedor { max-width: $a-0750;background-color: $cc-fondo-0750;color:$cc-texto-0750 }}
+$a-min-0801:  801px; $a-max-1000: 1000px;   $a-0950:  950px;  
+@media (min-width: $a-min-0801) and ( max-width: $a-max-1000)  {.contenedor { max-width: $a-0950;background-color: $cc-fondo-0950;color:$cc-texto-0950 }}
+$a-min-1001: 1001px; $a-max-1200: 1200px;   $a-1150: 1150px;  
+@media (min-width: $a-min-1001) and ( max-width: $a-max-1200)  {.contenedor { max-width: $a-1150;background-color: $cc-fondo-1150;color:$cc-texto-1150 }}
+$a-min-1201: 1201px; $a-max-1400: 1400px;   $a-1350: 1350px;  
+@media (min-width: $a-min-1201) and ( max-width: $a-max-1400)  {.contenedor { max-width: $a-1350;background-color: $cc-fondo-1350;color:$cc-texto-1350 }}
+$a-min-1401: 1401px; $a-max-20000:20000px; $a-1550: 1550px;   
+@media (min-width: $a-min-1401) and ( max-width: $a-max-20000) {.contenedor { max-width: $a-1550;background-color: $cc-fondo-1550;color:$cc-texto-1550 }}
+
+
+

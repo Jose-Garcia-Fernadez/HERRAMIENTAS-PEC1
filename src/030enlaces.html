@@ -1,0 +1,84 @@
+<!-- https://parceljs.org/docs/ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="11-scss/inicio.scss">  
+  <title>Fuentes de multimedia y texto </title>
+  <style></style>
+</head>
+<body>  
+  <include src="_11cabecera-paginas.html" locals='{ "text": "header"}'></include>   
+  <main class="contenedor">    
+    <div class="_030enlaces">
+      <!-- Lista  -->      
+      <h2>Fuentes multimedia, texto y agradecimientos</h2>
+      <ul>
+        <li>Fuentes de imagenes y videos
+          <dl> 
+            <dt>Escudo de Nazaré</dt>   <dd><a href="https://commons.wikimedia.org/wiki/File:NZR.png">Autor: Sérgio Horta File:NZR.Png. (n.d.). Wikimedia.org. Retrieved April 14, 2023</a></dd>            
+            <dt>Icono Facebook</dt>     <dd><a href="https://www.flaticon.es/iconos-gratis/facebook" title="facebook iconos">Facebook iconos creados por Freepik - Flaticon</a></dd>
+            <dt>Icono Instagram</dt>    <dd><a href="https://www.flaticon.es/iconos-gratis/instagram" title="instagram iconos">Instagram iconos creados por Pixel perfect - Flaticon</a></dd>            
+            <dt>Icono Whatsapp</dt>     <dd><a href="https://www.flaticon.es/iconos-gratis/whatsapp" title="whatsapp iconos">Whatsapp iconos creados por Pixel perfect - Flaticon</a></dd>            
+            <dt>Todos las imagenes</dt> <dd>Estan realizadas por José García Fernández</dd>
+            <dt>Todos los Videos</dt>   <dd>Estan realizadas por José García Fernández</dd>
+          </dl>
+        </li>
+        <li>Fuentes de texto
+          <dl>            
+            <dt>Alcobaça</dt><dd><a href="https://www.turismoenportugal.org/alcobaca">Portugal, T. en. (2016, February 5). Alcobaça, Portugal. Turismoenportugal.org; Turismo en Portugal</a></dd>
+            <dt>Fátima</dt><dd><a href="https://es.wikipedia.org/w/index.php?title=Virgen_de_F%C3%A1tima&oldid=150425924">Wikipedia contributors. (n.d.-c). Virgen de Fátima. Wikipedia, The Free Encyclopedia</a></dd>
+            <dt>Nazaré</dt><dd><a href="https://viajes.nationalgeographic.com.es/a/nazare-capital-olas-gigantes-y-surf_13032">Adamuz, J. A. (2022 de agosto de 28). Nazaré: la capital de las olas gigantes está en Portugal. National Geographic</a></dd>
+            <dt>Óbidos</dt><dd><a href="https://www.lisboa.es/obidos/">Qué ver en Óbidos en un día (2023), dónde comer y cómo llegar desde Lisboa. (2012, November 25). Guía Nómada de Lisboa</a></dd>                        
+            <dt>Sintra</dt><dd><a href="https://es.wikipedia.org/w/index.php?title=Sintra&oldid=149978857">Wikipedia contributors. (n.d.-d). Sintra. Wikipedia, The Free Encyclopedia</a></dd>
+          </dl>
+        </li>
+        
+
+
+        <li>Agradecimientos
+          <dl>
+            <dt>A mi esposa</dt><dd>Por aguantarme más de <strong id="contador-casado">40 años</strong>,y hacerme más feliz a cada dos segundos que pasan</dd>
+            <dt>A mis hijos</dt><dd>Por quererme tal como soy más de 27 años y hacerme muy feliz</dd>
+            <dt>A Lg</dt><dd>Por el portátil tan bonito que tengo de 17 pulgadas que pesa 1.4kg</dd>
+            <dt>A Intel</dt><dd>Puerto por el puerto usb c thunderbolt 4 que permite encadenar dos monitores 8K</dd>
+            <dt>A Uperfet</dt><dd>Por crear un monitor de 18.5 pulgas que pesa menos de un kilo</dd>
+            <dt>A Lenovo</dt><dd>Por crear un monitor de 40 pulgadas 5K,me permite estar más tiempo delante de la pantalla</dd>
+            <dt>A Microsoft</dt><dd>Por Visual Studio Code y Office</dd>
+            <dt>A 7zr</dt><dd>Por comprimir ficheros</dd>
+            <dt>A Node</dt><dd>Por crear un entorno de ejecución</dd>
+            <dt>A GitHub</dt><dd>Por hacer copias incrementales de seguridad y subirlas al servidor</dd>
+            <dt>A i_view640</dt><dd>Por comprimir, cambiar de formato las imagenes en modo batch</dd>
+            <dt>A Freemake</dt><dd>Por editar y cambiar de formato videos</dd>  
+
+            <dt>A BibGuru</dt><dd>Por crear las referencias APA 7ª edición</dd>
+            <dt>A Parcel</dt><dd>Por crear el compilador html, css, etc</dd>            
+            0<dt>Gracias</dt><dd>A todos los que me han ayudado en esta vida, mi familia, amigos/as, enfermeros/as, médicos/as, cirujanos/as, oncólogos/as, urólogos/as, etc...</dd>
+            <!-- <dt></dt><dd></dd> -->
+            <!-- <dt></dt><dd></dd> -->
+          </dl>
+        </li>        
+      </ul>
+      <!-- Lista de definicion -->
+    </div>    
+  </main>    
+  <include src="_12pie-paginas.html" locals='{ "text": "footer"}'></include>
+ 
+  <!-- Scripts -->
+  <script type="module" src="12-js/main.js"></script>
+  <script type="module" src="12-js/mi.js"></script>    
+  
+  <script>
+    CargarContador();
+    function CargarContador() {
+      var f=new Date();
+      var span=document.getElementById("contador-casado");
+      span.innerHTML=(f.getFullYear()-1982) + " años " +(f.getMonth() +1) + " meses " +
+      f.getDay() + " días " + f.getHours() + " horas y " + f.getSeconds() + " segundos ";
+      setTimeout(CargarContador, 2000);
+    }
+  </script> 
+</body>
+</html>

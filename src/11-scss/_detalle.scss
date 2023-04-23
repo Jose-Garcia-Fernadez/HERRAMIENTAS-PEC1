@@ -1,0 +1,21 @@
+
+.detalle {
+  line-height: 1.5;      
+  p{ font-size: alturafuente(1);}
+  dl {
+    font-weight: 400;
+    line-height: 1.5;      
+    margin-left: alturafuente(1);
+    > dt {
+    }
+    > dd {  
+      margin-left: alturafuente(1);
+      }
+    >  &:after {
+      content: ".";
+      }
+    }
+  }
+
+
+

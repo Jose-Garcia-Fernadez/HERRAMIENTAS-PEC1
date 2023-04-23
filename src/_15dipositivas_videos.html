@@ -1,0 +1,12 @@
+<!-- Al hacer de esta forma las imagenes se cargan de una en una -->
+<!-- _diapositivas_v4.scss -->
+
+<div     id="div-video-{{ciudad}}"  class="horizontal-pgn-div">        
+  <h2    id="h2-video-{{ciudad}}"    class="horizontal-pgn-h2" >{{texto2}}</h2>   
+  <video id="video-video-{{ciudad}}" class="horizontal-pgn-img" controls autoplay><source src="/src/13-imagenes/propias/alcobasa/mp4/320/2021_09_09 21_21_14    @   Portugal Monasterio de Alcobasa @.mp4" type="video/mp4">Tu explorador no soporta videos mp4</video>
+  <h3    id="h3-video-{{ciudad}}"    class="horizontal-pgn-h3">{{texto2}}</h3>   
+  <button class="diapositivas-boton posicionar-izquierda" onclick="siguiente_video_{{ciudad}}(-1,1)">&#10094;</button> 
+  <button class="diapositivas-boton posicionar-derecha"   onclick="siguiente_video_{{ciudad}}(1,1)">&#10095;</button> 
+</div>
+<script type="module" src="/src/12-js/d/diapositiva_video--{{ciudad}}.js"></script>
+                               

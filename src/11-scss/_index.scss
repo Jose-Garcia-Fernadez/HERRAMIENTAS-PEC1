@@ -1,0 +1,20 @@
+.index {
+  margin: 0 auto;
+  background-size: cover; /*escale la imagen de fondo proporcionalmente para que su anchura y altura sean iguales o mayores que la anchura/altura del elemento*/
+  background-position: center center; /* siempre centrada en la ventana gráfica*/
+  background-attachment: fixed; /* permanezca siempre en su lugar */
+  background-color:rgb(100,250,255); /* mientras carga la imagen */
+  background-image: url('/src/13-imagenes/opacidad/luxa.org-opacity-changed-120190407121400100Portugal-Nazare1500.png');
+  h2 {
+    text-align: center;
+    line-height: 4;
+    padding:alturafuente(2);
+  } 
+}
+
+@media (max-width: 800px) {
+  .index {
+    background-image: url('/src/13-imagenes/opacidad/luxa.org-opacity-changed-120190407121400100Portugal-Nazare1500.png');
+  }
+	}
+  //https://www.webfx.com/blog/web-design/responsive-background-image/

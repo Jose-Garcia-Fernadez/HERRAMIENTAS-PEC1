@@ -1,0 +1,51 @@
+<!-- https://parceljs.org/docs/ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="11-scss/inicio.scss">  
+  <title>Diapositivas de Alcobaça</title>
+  <style></style>
+</head>
+<body>  
+  <include src="_11cabecera-paginas.html" locals='{ "text": "header"}'></include>   
+  <main>
+    <div class="contenedor"> 
+      <div class="detalle">
+        <div class="a0">
+          <h3>Las diapositivas de fotos cambian solas cada 5 sg o cuando se termina el video.</h3>
+          <h3>Si quiere pasar a la siguiente diapositiva pulse a los botones.</h3>
+          <h3>Si quiere ver la diapositiva a pantalla completa pulse dos veces con el ratón.</h3>
+        </div>
+        <div class="b"><p>p1-cambiar</p></div>
+        <div class="c"><p>p2-cambiar</p></div>
+        <div class="d"><p>p3-cambiar</p></div>
+        <div class="e">
+          <dl>
+            <dt>dt1</dt><dd>descripcion1</dd>
+            <dt>dt2</dt><dd>descripcion2</dd>
+            <dt>dt3</dt><dd>descripcion3</dd>            
+            <dt>dt4</dt><dd>descripcion4</dd>
+            <dt>dt5</dt><dd>descripcion5</dd>            
+          </dl>
+        </div>      
+        <div class="f">
+          <include src="_13dipositivas_horizontales.html" locals='{"ciudad":"alcobasa","texto2":"Presentación de fotos de Alcobaça"}'></include>      
+        </div>
+         <div class="g">
+          <include src="_14dipositivas_verticales.html" locals='{"ciudad":"alcobasa","texto2":"Presentación de fotos de Alcobaça"}'></include>      
+        </div>
+        <div class="h">
+          <include src="_15dipositivas_videos.html" locals='{"ciudad":"alcobasa","texto2":"Presentación de videos de Alcobaça"}'></include>
+        </div>
+      </div>     
+    </div>    
+  </main>    
+  <include src="_12pie-paginas.html" locals='{ "text": "footer"}'></include>
+  <!-- Scripts -->
+  <script type="module" src="12-js/main.js"></script>
+  <script type="module" src="12-js/mi.js"></script>    
+</body>
+</html>

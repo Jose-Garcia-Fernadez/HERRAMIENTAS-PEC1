@@ -1,0 +1,18 @@
+{
+  "elements": [
+    "html5"
+  ],
+  "extends": [
+    "html-validate:recommended",
+    "html-validate-vue:recommended"
+  ],
+  "transform": {
+    "^.*\\.js$": "html-validate-angular/js",
+    "^.*\\.html$": "html-validate-angular/html",
+    "^.*\\.vue$": "html-validate-vue",
+    "^.*\\.md$": "html-validate-markdown"
+  },
+  "plugins": [
+    "html-validate-vue"
+  ]
+}

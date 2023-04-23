@@ -1,0 +1,11 @@
+<!-- Al hacer de esta forma las imagenes se cargan de una en una -->
+<!-- _diapositivas_v4.scss -->
+
+<div     id="div-ver-{{ciudad}}" class="horizontal-pgn-div">          
+  <h2    id="h2-ver-{{ciudad}}"  class="horizontal-pgn-h2">{{texto2}}</h2>   
+  <img   id="img-ver-{{ciudad}}" class="horizontal-pgn-img" src="/src/13-imagenes/propias/fatima/png/300/1/3.png" alt="Fatima"> <!-- La más pequeña -->
+  <h3    id="h3-ver-{{ciudad}}"  class="horizontal-pgn-h3"">{{texto2}}</h3>   
+  <button class="diapositivas-boton posicionar-izquierda" onclick="siguiente_vertical_{{ciudad}}(-1,1)">&#10094;</button> 
+  <button class="diapositivas-boton posicionar-derecha"   onclick="siguiente_vertical_{{ciudad}}(1,1)">&#10095;</button> 
+</div>
+<script type="module" src="/src/12-js/d/diapositiva_fotos-vertical--{{ciudad}}.js"></script>

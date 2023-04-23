@@ -1,0 +1,50 @@
+<!-- https://parceljs.org/docs/ -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="11-scss/inicio.scss">  
+  <title>Presentación</title>
+  <style></style>
+</head>
+<body>  
+  <include src="_11cabecera-paginas.html" locals='{ "text": "header"}'></include>   
+  <main>
+    <div class="contenedor"> 
+      <div class="presentacion">
+        <h2>Esta web esta dedicada a varios pueblos de Portugal que me han hecho muy feliz</h2>
+        <h3>En especial a las personas que con su esfuerzo y sabiduria han cabalgado las holas más grandes del mundo en sus tablas de surf.</h3>
+        <h3>Siempre que he estado en fatima, me he sentido mejor de salud, la primera vez pase de 3.5 diotrias a 1.5 diotrias, despues de varios meses volvieron las 3.5 diotrias.</h3>
+        <figure>
+          <picture>
+            <source media="(min-width:650px)" srcset="13-imagenes/propias/nazare/png/900/1/1.png">
+            <source media="(min-width:465px)" srcset="13-imagenes/propias/nazare/png/600/1/1.png">
+            <img src="13-imagenes/propias/nazare/png/300/1/1.png" alt="Nazaré">
+          </picture>
+          <figcaption>Puerta de entrada al faro de Nazaré</figcaption>
+        </figure>
+        <figure>
+          <img src="13-imagenes/propias/fatima/png/300/1/1.png" alt="">
+          <figcaption>Lapidas de Jacinta y Lucia</figcaption>
+        </figure>
+        <figure>
+        <video  controls>
+          <source src="13-imagenes/propias/nazare/mp4/640/2021_09_09 23_45_26    @   Portugal Nazaré @.mp4" type="video/mp4">          
+          El navegador es incompatible con la etiqueta de video o ficheros mp4
+        </video>
+        <figcaption>Playa sur de Nazaré</figcaption>
+      </figure>      
+      </div>     <!--presentacion  -->
+    </div>       <!-- contenedor  -->
+  </main>    
+  <include src="_12pie-paginas.html" locals='{ "text": "footer"}'></include>
+  <!-- Scripts -->
+  <script type="module" src="12-js/main.js"></script>
+  <script type="module" src="12-js/mi.js"></script>    
+  
+</body>
+</html>
+
+

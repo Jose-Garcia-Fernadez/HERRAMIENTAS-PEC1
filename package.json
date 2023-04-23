@@ -1,0 +1,65 @@
+{
+  "name": "pec1",
+  "version": "1.0.0",
+  "description": "",
+  "source": [
+    "src/index.html"
+  ],
+  "scripts": {
+    "parcel-produccion-debug": "parcel build  --target browsers --no-source-maps --no-cache  --dist-dir destino-debug",
+    "parcel-produccion": "parcel build  --target browsers --no-source-maps --no-cache  --dist-dir destino",
+    "parcel-desarrollo": "parcel  -p 8125  --open --target browsers  --dist-dir destino",
+    "parcel-desarrolloz": "parcel  -p 8125  --open --target browsers  --dist-dir z:/destino",
+    "limpieza": "rimraf destino .cache .cache-loader .parcel-cache",
+    "limpiezaz": "rimraf z:/destino .cache .cache-loader .parcel-cache",
+    "sd": "npm-run-all debug copia limpieza parcel-desarrollo",
+    "sdz": "npm-run-all debug copia limpiezaz parcel-desarrolloz lorem-por-buenos-en-destino",
+    "sp": "npm-run-all no-debug copia limpieza parcel-produccion",
+    "debug": "node src/12-js/ejecuta-debug-inline.js",
+    "no-debug": "node src/12-js/ejecuta-debug-none.js",
+    "copia": "node src/12-js/ejecuta-cmd.js",
+    "p": "node src/12-js/listados.js",
+    "lorem-por-buenos-en-destino":"node src/12-js/cambia-lorem-por-buenos-en-destino.js",
+    "lorem-por-buenos-en-origen": "node src/12-js/cambia-lorem-por-buenos-en-origen.js",
+    "buenos-por-lorem-en-origen": "node src/12-js/cambia-buenos-por-lorem-en-origen.js"
+  },
+  "targets": {
+    "browsers": {
+      "context": "browser",
+      "publicUrl": "./",
+      "engines": {
+        "browsers": "last 2 versions, > 0.5%, not dead"
+      }
+    }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "autoprefixer": "^10.4.14",
+    "events": "^3.3.0",
+    "npm-run-all": "^4.1.5",
+    "os-browserify": "^0.3.0",
+    "parcel": "^2.8.3",
+    "path-browserify": "^1.0.1",
+    "postcss-lit": "^1.1.0",
+    "postcss-preset-env": "^8.1.0",
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10",
+    "punycode": "^1.4.1",
+    "querystring-es3": "^0.2.1",
+    "rimraf": "^4.4.1",
+    "sharp": "^0.32.0",
+    "stream-browserify": "^3.0.0",
+    "stylelint": "^15.3.0",
+    "stylelint-config-standard": "^31.0.0",
+    "stylelint-config-standard-scss": "^7.0.1",
+    "url": "^0.11.0",
+    "util": "^0.12.5"
+  },
+  "dependencies": {
+    "git": "^0.1.5",
+    "node-replace": "^0.3.3"
+  }
+}

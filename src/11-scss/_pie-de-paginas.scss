@@ -1,0 +1,79 @@
+@function alturafuente($h){@return calc( 1rem * $h/2 + 1vw * $h/2 );}
+.footer {
+  line-height: 1.5;
+  font-size: alturafuente(6);
+  background: #73b3de;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center; justify-content: center;
+  > .holas {
+    position: absolute;overflow: hidden;
+    /*height: auto;
+    width: auto;   */
+    top:0px; bottom: 0px;
+   > .hola {
+      position: absolute;left: 0px;bottom: 0px;height: 100%;
+      width:  100%;
+      border-radius: 100%;background:rgba(255,255,255, .2);       
+      animation: 5s hola-keyframes ease-in-out infinite alternate;
+    }
+    > .a {background-position: 0 10%; animation-delay: 1s;}
+    > .b {background-position: 0 20%; animation-delay: 2s;}
+    > .c {background-position: 0 0;   animation-delay: 3s;}  
+  } // holas
+  > .texto {
+    > h3 {
+      padding-top: alturafuente(2);
+    }
+    > p {
+      padding-top: alturafuente(2);
+      @if $debug==inline { background-color: yellow;}
+    }
+    input[type="email"] {
+      border: 0;
+      padding: alturafuente(1);
+      margin-top: alturafuente(0.5);
+    }
+    input[type="submit"] {
+      background-color: #00d188;
+      color: #fff;
+      cursor: pointer;
+      border: 0;
+      padding: alturafuente(1) alturafuente(0.5) ;            
+      margin-top: alturafuente(0.5);
+    }
+  }
+  > .social  {
+   > ul  {
+      list-style: none;
+      display: flex;
+      flex-direction: row;     
+      
+      justify-content: center;
+      margin: 5px;
+      > li {margin-left:40px;}
+    }
+  }
+  > .legal{
+    > ul {
+      list-style: none;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      @if $debug==inline { background-color: greenyellow; }
+      flex-wrap: wrap;
+      margin: 5px;
+      > li {
+        margin-left: 40px;
+      }
+     }
+  }
+}
+
+
+@keyframes hola-keyframes {
+  0%   {transform: translate(0 , 0);}  
+  50%  {transform: translate(-100px, 50px);}  
+  100% {transform: translate(200px, 0px);}
+}

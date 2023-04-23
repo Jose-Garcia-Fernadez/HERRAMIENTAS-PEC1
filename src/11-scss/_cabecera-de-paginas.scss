@@ -1,0 +1,28 @@
+.menu {font-size: alturafuente(3);}
+#cabecera-h1-nazare {padding-left: alturafuente(1.5);display:inline;color:$c-cabecera-texto; }
+#cabecera-div-nazare > a { padding: 0px;text-decoration: none;  border: none; color: $c-cabecera-texto;}
+#cabecera-div-nazare > a:hover { padding: 0px;text-decoration: none;  border: none; color: $c-cabecera-texto;}
+img.nazare{vertical-align: middle;}
+
+nav.menu {
+  padding-top: 1rem;
+  > ul {          font-size: alturafuente(1.5);  
+                  padding-right: alturafuente(1.5); list-style-type: none;  align-items:center; justify-content: center;
+    > li {        padding-bottom: 5px;text-align: center;
+      > a {       font-weight: 800;text-decoration: none;color: $c-cabecera-texto;
+        &:hover { text-decoration: none;color: $c-cabecera-texto-contraste;} 
+      } /* a */
+    } /* li */
+  } /* ul */
+}
+
+@media (min-width: $a-min-0001) and ( max-width: $a-max-0800)   
+  {.menu {display: flex;  flex-direction: column; line-height:1.2;}}
+
+@media (min-width: $a-min-0801) and ( max-width: $a-max-20000) {
+  .menu { display: flex; flex-direction: row;  justify-content: space-between;
+    ul  {display: flex; flex-direction: row; margin-top: -30px; 
+      li { margin-top: 35px; margin-left: 20px;} 
+    } /* ul */
+  }  /* .menu */
+}
